@@ -65,6 +65,24 @@ public class ScaleService {
         return scaleRepository.findAll();
     }
 
+    public String update(Long id, Scale updatedScale) {
+        return scaleRepository.findById(id).map(scale -> {
+
+            if (updatedScale.getFirstWorkDay() != null) {
+                scale.setFirstWorkDay(updatedScale.getFirstWorkDay());
+            }
+            if (updatedScale.getWorkDays() > 0) {
+                scale.setWorkDays(updatedScale.getWorkDays());
+            }
+            if (updatedScale.getDaysOff() > 0) {
+                scale.setDaysOff(updatedScale.getDaysOff());
+            }
+            scaleRepository.save(scale);
+            return "Scale updated with ID: " + id;
+
+        }).orElse("Scale not found with ID: " + id);
+    }
+
     public String deleteById(Long id) {
         if (!scaleRepository.existsById(id)) {
             return "Scale not found with ID: " + id;

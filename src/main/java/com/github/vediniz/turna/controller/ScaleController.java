@@ -41,6 +41,16 @@ public class ScaleController {
         return ResponseEntity.status(HttpStatus.CREATED).body(scaleService.create(scale));
     }
 
+    @PatchMapping("/update/{id}")
+    public ResponseEntity<String> updateScale(
+            @PathVariable ("id") Long id,
+            @RequestBody Scale scale) {
+        if(scale == null) {
+            return ResponseEntity.badRequest().body("Scale data is required");
+        }
+        return ResponseEntity.ok(scaleService.update(id, scale));
+    }
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteScaleById(@PathVariable("id") Long id) {
         scaleService.deleteById(id);
