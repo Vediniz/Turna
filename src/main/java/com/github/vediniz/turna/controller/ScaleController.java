@@ -22,7 +22,7 @@ public class ScaleController {
         return scaleService.findAll();
     }
 
-    @GetMapping("/{id}/schedule")
+    @GetMapping("/{id}")
     public ResponseEntity<List<ScheduleDay>> getMonthlySchedule(
             @PathVariable("id") Long id,
             @RequestParam("year") int year,
