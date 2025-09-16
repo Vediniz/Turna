@@ -41,5 +41,10 @@ public class ScaleController {
         return ResponseEntity.status(HttpStatus.CREATED).body(scaleService.create(scale));
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteScaleById(@PathVariable("id") Long id) {
+        scaleService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }

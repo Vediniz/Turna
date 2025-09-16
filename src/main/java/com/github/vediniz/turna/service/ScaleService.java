@@ -65,5 +65,13 @@ public class ScaleService {
         return scaleRepository.findAll();
     }
 
+    public String deleteById(Long id) {
+        if (!scaleRepository.existsById(id)) {
+            return "Scale not found with ID: " + id;
+        }
+        scaleRepository.deleteById(id);
+        return "Scale deleted with ID: " + id;
+    }
+
 
 }
