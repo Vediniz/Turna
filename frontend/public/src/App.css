@@ -1,0 +1,28 @@
+.app-header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-section {
+  margin-top: 3rem;
+  border-top: 2px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+#month-picker {
+    max-width: 250px;
+}
