@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 function ScaleForm({ scale, onSave, onCancel }) {
   const [formData, setFormData] = useState({
     firstWorkDay: '',
