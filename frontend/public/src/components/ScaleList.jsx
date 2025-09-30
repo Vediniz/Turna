@@ -1,5 +1,5 @@
 import React from 'react';
-import './ScaleList.css'; // Criaremos este arquivo de estilo
+import './ScaleList.css';
 
 const ScaleList = ({ scales, onSelect, onEdit, onDelete }) => {
   if (scales.length === 0) {
@@ -17,8 +17,6 @@ const ScaleList = ({ scales, onSelect, onEdit, onDelete }) => {
           </div>
           <div className="scale-actions">
             <button onClick={() => onSelect(scale)}>Ver Calendário</button>
-            <button className="secondary" onClick={() => onEdit(scale)}>Editar</button>
-            <button className="danger" onClick={() => onDelete(scale.id)}>Excluir</button>
           </div>
         </div>
       ))}
