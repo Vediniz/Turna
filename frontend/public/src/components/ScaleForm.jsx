@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './ScaleForm.css'; // Adicionar esta linha
+import './ScaleForm.css'; 
 
 function ScaleForm({ scale, onSave, onCancel }) {
-  // O resto do código permanece o mesmo...
+  
   const [formData, setFormData] = useState({
     firstWorkDay: '',
     workDays: '',
