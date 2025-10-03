@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { getScales, getMonthlySchedule, createScale, updateScale, deleteScale } from './services/api';
+import { getScales, getMonthlySchedule, createScale} from './services/api';
 import ScaleList from './components/ScaleList';
 import Calendar from './components/Calendar';
 import ScaleForm from './components/ScaleForm';
 import './App.css'; // Criaremos este arquivo de estilo
+
 
 function App() {
   const [scales, setScales] = useState([]);
