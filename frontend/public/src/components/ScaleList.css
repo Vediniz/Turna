@@ -1,0 +1,38 @@
+.scale-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.scale-item {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.scale-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.scale-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.scale-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.scale-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
